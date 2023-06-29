@@ -5,7 +5,6 @@ import Image from "next/image";
 import Style from "./Model.module.css";
 import images from "../../images";
 import { ChatAppContect } from "../../Context/ChatAppContext";
-import { Loader } from "../../Components/index";
 
 const Model = ({
   openBox,
@@ -21,7 +20,6 @@ const Model = ({
   const [name, setName] = useState("");
   const [userAddress, setUserAddress] = useState(address);
 
-  const { loading } = useContext(ChatAppContect);
   return (
     <div className={Style.Model}>
       <div className={Style.Model_box}>
@@ -31,10 +29,6 @@ const Model = ({
           </h1>
           <p>{info}</p>
           <small>{smallInfo}</small>
-
-          {loading == true ? (
-            <Loader />
-          ) : (
             <div className={Style.Model_box_left_name}>
               <div className={Style.Model_box_left_name_info}>
                 <Image
@@ -76,7 +70,7 @@ const Model = ({
                 </div>
               </div>
             </div>
-          )}
+
         </div>
         <div className={Style.Model_box_right}>
           <Image src={image} alt="buddy" width={850} height={850} />
