@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import Style from "./Chat.module.css";
 import images from "../../../images";
 import { converTime } from "../../../Utils/apiFeature";
-import { Loader } from "../../index";
 
 const Chat = ({
   functionName,
@@ -19,7 +18,6 @@ const Chat = ({
   currentUserAddress,
   readUser,
 }) => {
-  //USTE STATE
   const [message, setMessage] = useState("");
   const [chatData, setChatData] = useState({
     name: "",
@@ -40,7 +38,6 @@ const Chat = ({
     }
   }, []);
 
-  // console.log(chatData.address, chatData.name);
   return (
     <div className={Style.Chat}>
       {currentUserName && currentUserAddress ? (
