@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-//INTERNAL IMPORT
 import Style from "./UserCard.module.css";
 import images from "../../images";
 const UserCard = ({ el, i, addFriends }) => {
@@ -16,9 +15,9 @@ const UserCard = ({ el, i, addFriends }) => {
       />
       <div className={Style.UserCard_box_info}>
         <h3>{el.name}</h3>
-        <div className="tooltip">
+        <div className={Style.tooltip}>
           <p>{el.accountAddress.slice(0, 25)}..</p>
-          <p className="tooltiptext">{el.accountAddress}</p>
+          <p className={Style.tooltiptext}>{el.accountAddress}</p>
         </div>
         <button
           onClick={() =>
