@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-//INTERNAL IMPORT
 import Style from "./NavBar.module.css";
 import { ChatAppContect } from "../../Context/ChatAppContext";
 import { Model, Error } from "../index";
@@ -11,11 +10,15 @@ import images from "../../images";
 const NavBar = () => {
   const menuItems = [
     {
+      menu: "ALL USERS |",
+      link:"alluser",
+    },
+    {
       menu: "CHAT |",
       link: "/",
     },
     {
-      menu: "CONTACT US|",
+      menu: "CONTACT US |",
       link: "/",
     },
     {
@@ -24,7 +27,6 @@ const NavBar = () => {
     },
   ];
 
-  //USESTATE
   const [active, setActive] = useState(2);
   const [open, setOpen] = useState(false);
   const [openModel, setOpenModel] = useState(false);
