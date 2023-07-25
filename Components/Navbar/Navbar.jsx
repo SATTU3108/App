@@ -27,6 +27,7 @@ const NavBar = () => {
     },
   ];
 
+  //USESTATE
   const [active, setActive] = useState(2);
   const [open, setOpen] = useState(false);
   const [openModel, setOpenModel] = useState(false);
@@ -109,9 +110,6 @@ const NavBar = () => {
                 <small>{userName || "Create Account"}</small>
               </button>
             )}
-            <div className={Style.Logout}>
-              <p>LOGOUT</p>
-            </div>
           </div>
           <div
             className={Style.NavBar_box_right_open}
@@ -137,6 +135,7 @@ const NavBar = () => {
           />
         </div>
       )}
+      {error == "" ? "" : <Error error={error} />}
     </div>
   );
 };
