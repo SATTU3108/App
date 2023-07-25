@@ -51,7 +51,7 @@ const Model = ({
                 <Image src={images.account} alt="user" width={30} height={30}/>
                 <input
                   type="text"
-                  placeholder={"Enter Metamask Address"}
+                  placeholder={address || "Enter Metamask Address"}
                   onChange={(e) => setUserAddress(e.target.value)}
                 />
               </div>
