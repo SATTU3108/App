@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import Image from "next/image";
 
-//INTERNAL IMPORT
 import Style from "./Model.module.css";
 import images from "../../images";
 import { ChatAppContect } from "../../Context/ChatAppContext";
@@ -17,7 +16,7 @@ const Model = ({
   image,
   functionName,
 }) => {
-  //USESTATE
+  
   const [name, setName] = useState("");
   const [userAddress, setUserAddress] = useState(address);
 
@@ -31,7 +30,6 @@ const Model = ({
           </h1>
           <p>{info}</p>
           <small>{smallInfo}</small>
-
           {loading == true ? (
             <Loader />
           ) : (
